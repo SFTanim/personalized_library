@@ -1,15 +1,25 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-.button-style-01{
-    /* border: 1px solid black; */
-    border-radius: 8px;
-    width: fit-content;
-    color: rgb(255, 115, 0);
-    padding: 4px 10px 4px 10px;
+.button-style-01 {
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  width: fit-content;
+  color: rgb(255, 115, 0);
+  padding: 4px 10px 4px 10px;
 }
 
-.button-style-01:hover{
-color: white;
-background-color: orange;
+.button-style-01:hover {
+  color: white;
+  background-color: orange;
+}
+
+.input_field_01 {
+  border: 1px solid rgb(255, 115, 0);
+  border-radius: 4px;
+  padding: 4px 10px 4px 10px;
+
+}
+.input_field_01:focus {
+  border: 0px ;
 }
