@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
 
 .button-style-01 {
   /* border: 1px solid black; */
@@ -18,8 +25,7 @@
   border: 1px solid rgb(255, 115, 0);
   border-radius: 4px;
   padding: 4px 10px 4px 10px;
-
 }
 .input_field_01:focus {
-  border: 0px ;
+  border: 0px;
 }

@@ -269,16 +269,10 @@ const Navbar = () => {
                         {/* if there is a button in form, it will close the modal */}
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    {/* <form action="" className="space-y-1">
-                        <h2 className="w-full">Book Name (Original)</h2>
-                        <input type="text" placeholder="" className="input w-full input_field_01" />
-                        <h2 className="w-full">Book Name (Original)</h2>
-                        <input type="text" placeholder="" className="input w-full input_field_01" />
-                    </form> */}
 
-
+                    {/* MODAL */}
                     <form className="my-2" onSubmit={handleSubmit(onSubmit)}>
-                        <div className="flex flex-col space-y-2">
+                        <div className="flex flex-col space-y-2 ">
 
                             <div className="flex flex-col space-y-0.5">
                                 <label className="underline" >Book Name (Original)</label>
@@ -307,7 +301,7 @@ const Navbar = () => {
                                                 options={writersNationality}
                                                 placeholder="Select Original Writer nationality..."
                                                 isClearable
-                                                isSearchable // 👈 Enables search
+                                                isSearchable
                                             />
                                         )}
                                     />
