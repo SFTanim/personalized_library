@@ -31,11 +31,11 @@ const Navbar = () => {
 
     const navbar = (
         <>
-            <li><NavLink to={"/"}>Home</NavLink></li>
-            <li><NavLink to={"/readed"}>Readed</NavLink></li>
-            <li><NavLink to={"/wishToRead"}>Wish To Read</NavLink></li>
-            <li><NavLink to={"/iHave"}>Books I Have</NavLink></li>
-            <li><NavLink to={"/booksIWant"}>Books I Want</NavLink></li>
+            <li id="navBarLink"><NavLink to={"/"}>Home</NavLink></li>
+            <li id="navBarLink"><NavLink to={"/readed"}>Readed</NavLink></li>
+            <li id="navBarLink"><NavLink to={"/wishToRead"}>Wish To Read</NavLink></li>
+            <li id="navBarLink"><NavLink to={"/iHave"}>Books I Have</NavLink></li>
+            <li id="navBarLink"><NavLink to={"/booksIWant"}>Books I Want</NavLink></li>
         </>
     )
     return (
