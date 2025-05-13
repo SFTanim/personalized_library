@@ -1,10 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../pages/Root";
 import Home from "../pages/Home";
-import BooksIWant from "../pages/BooksIWant";
-import IHave from "../pages/IHave";
-import IReaded from "../pages/IReaded";
-import WishToRead from "../pages/WishToRead";
+import AddBooks from "../components/sharedComponents/AddBooks";
+import MyBookList from "../pages/MyBookList";
+import Community from "../pages/Community";
 
 
 const router = createBrowserRouter([
@@ -17,21 +16,17 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/iHave",
-                element: <IHave/>
+                path: "/addBook",
+                element: <AddBooks />
             },
             {
-                path: "/booksIWant",
-                element: <BooksIWant/>
+                path: "/myBookLibrary",
+                element: <MyBookList />
             },
             {
-                path: "/readed",
-                element: <IReaded/>
-            },
-            {
-                path: "/wishToRead",
-                element: <WishToRead/>
-            },
+                path: "/community",
+                element: <Community />
+            }
         ]
     },
 ]);

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { ArrowBigRight } from 'lucide-react';
 
 export default function App() {
   const progressCircle = useRef<SVGSVGElement>(null)
@@ -20,7 +21,6 @@ export default function App() {
   }
 
   const bannerImages = [
-    "https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1513001900722-370f803f498d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -34,7 +34,7 @@ export default function App() {
   ]
 
   return (
-    <div className="relative w-full h-screen max-h-screen overflow-hidden">
+    <div className="relative w-full h-3/5 max-h-screen overflow-hidden">
       {/* Background Swiper - Only Images Change */}
       <Swiper
         spaceBetween={0}
@@ -43,13 +43,9 @@ export default function App() {
           delay: 5500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-          el: ".custom-pagination",
-        }}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="w-full h-full"
+        className="w-full h-full rounded-3xl"
       >
         {bannerImages.map((image, index) => (
           <SwiperSlide key={index}>
@@ -78,13 +74,15 @@ export default function App() {
       </Swiper>
 
       {/* Fixed Overlay - Stays in Place */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-20 flex items-center justify-center">
+      <div className="absolute rounded-3xl inset-0 bg-gradient-to-r from-black/70 to-black/40 z-20 flex items-center justify-center">
         <div className="max-w-3xl px-8 py-6 text-center">
           <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed drop-shadow-lg mb-8">
             Discover the world of books and expand your knowledge through reading
           </h2>
-          <button className="bg-white text-black hover:bg-gray-100 transition-colors px-6 py-3 rounded-full font-medium flex items-center mx-auto">
+          <button className="banner-button mx-auto">
             <h2 className="">Explore Our Collection</h2>
+            {/* <ArrowBigRight /> */}
+            <div className="arrow">›</div>
           </button>
         </div>
       </div>
